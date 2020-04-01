@@ -6,11 +6,13 @@
    <h1 class="display-4">Calculadora</h1>
 
    <form method="post">
-
+       <input type="hidden" value="@ViewBag.primeiroOperando" name="primeiroOperando" />
+       <input type="hidden" value="@ViewBag.operador" name="operador" />
+       <input type="hidden" value="@ViewBag.limpaVisor" name="limpaVisor" />
        <table border="1">
            <tr>
                <td colspan="5">
-                   <input type="text" value="readonly" name="visor" />
+                   <input type="text" value="@ViewBag.visor" name="visor" />
                </td>
            </tr>
            <tr>
@@ -43,45 +45,40 @@
                    <input type="submit" value="6" name="bt" class="btn" />
                </td>
                <td>
-                   <input type="submit" value="" name="bt" class="btn" />
+                   <input type="submit" value="x" name="bt" class="btn" />
                </td>
                <td>
-                   <input type="submit" value="" name="bt" class="btn" />
+                   <input type="submit" value="C" name="bt" class="btn" />
                </td>
            </tr>
            <tr>
                <td>
-                   <input type="submit" value="4" name="bt" class="btn" />
+                   <input type="submit" value="1" name="bt" class="btn" />
                </td>
                <td>
-                   <input type="submit" value="5" name="bt" class="btn" />
+                   <input type="submit" value="2" name="bt" class="btn" />
                </td>
                <td>
-                   <input type="submit" value="6" name="bt" class="btn" />
+                   <input type="submit" value="3" name="bt" class="btn" />
                </td>
                <td>
-                   <input type="submit" value="" name="bt" class="btn" />
+                   <input type="submit" value="-" name="bt" class="btn" />
                </td>
-               <td>
-                   <input type="submit" value="" name="bt" class="btn" />
+               <td colspan="2">
+                   <input type="submit" value="=" name="bt" class="btn" />
                </td>
            </tr>
            <tr>
-               <td>
-                   <input type="submit" value="4" name="bt" class="btn" />
+               <td rowspan="2">
+                   <input type="submit" value="0" name="bt" class="btn" />
                </td>
                <td>
-                   <input type="submit" value="5" name="bt" class="btn" />
+                   <input type="submit" value="," name="bt" class="btn" />
                </td>
                <td>
-                   <input type="submit" value="6" name="bt" class="btn" />
+                   <input type="submit" value="+" name="bt" class="btn" />
                </td>
-               <td>
-                   <input type="submit" value="" name="bt" class="btn" />
-               </td>
-               <td>
-                   <input type="submit" value="" name="bt" class="btn" />
-               </td>
+
            </tr>
        </table>
    </form>
